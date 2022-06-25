@@ -1,24 +1,15 @@
 package com.safetynet.alerts.model;
 
-import java.util.Date;
-
 public class Person {
     public String firstName;
     public String lastName;
-    public Date birthDate;
-    public Address address;
+    public String address;
+    public String city;
+    public String zip;
     public String phone;
     public String email;
 
     public Person() {
-    }
-
-    public Date getBirthDate() {
-	return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-	this.birthDate = birthDate;
     }
 
     public String getFirstName() {
@@ -37,11 +28,23 @@ public class Person {
 	this.lastName = lastName;
     }
 
-    public Address getAddress() {
-	return address;
+    public String getCity() {
+	return city;
     }
 
-    public void setAddress(Address address) {
+    public void setCity(String city) {
+	this.city = city;
+    }
+
+    public String getZip() {
+	return zip;
+    }
+
+    public void setZip(String zip) {
+	this.zip = zip;
+    }
+
+    public void setAddress(String address) {
 	this.address = address;
     }
 

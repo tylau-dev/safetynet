@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
+import com.safetynet.alerts.model.JsonData;
 
 @SpringBootApplication
 public class AlertsApplication {
@@ -49,8 +50,11 @@ public class AlertsApplication {
 		line = reader.readLine();
 	    }
 	    Map<String, Any> deserializedMap = JsonIterator.deserialize(jsonString).asMap();
-	    System.out.println(deserializedMap);
+	    // System.out.println(deserializedMap);
 	    deserializedMap.forEach((k, v) -> System.out.println("Key : " + k + " Value : " + v));
+	    JsonData obj = JsonIterator.deserialize(jsonString, JsonData.class);
+	    System.out.println(obj);
+	    System.out.println(obj.getPersons());
 
 	    SpringApplication.run(AlertsApplication.class, args);
 	}

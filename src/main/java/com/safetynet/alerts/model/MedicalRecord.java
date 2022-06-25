@@ -3,10 +3,21 @@ package com.safetynet.alerts.model;
 public class MedicalRecord {
     public String firstName;
     public String lastName;
+    public String birthDate;
     public Medication[] medications;
     public Allergy[] allergies;
 
     public MedicalRecord() {
+    }
+
+    public MedicalRecord(String firstName, String lastName, String birthDate, Medication[] medications,
+	    Allergy[] allergies) {
+	super();
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.birthDate = birthDate;
+	this.medications = medications;
+	this.allergies = allergies;
     }
 
     public String getFirstName() {
@@ -23,6 +34,14 @@ public class MedicalRecord {
 
     public void setLastName(String lastName) {
 	this.lastName = lastName;
+    }
+
+    public String getBirthDate() {
+	return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+	this.birthDate = birthDate;
     }
 
     public Medication[] getMedications() {

@@ -1,35 +1,32 @@
 package com.safetynet.alerts.model;
 
 public class FireStation {
-    public Integer id;
-    public Address address;
-    public Integer station;
+    public String address;
+    public String station;
 
     public FireStation() {
 	super();
     }
 
-    public Integer getId() {
-	return id;
+    public FireStation(String address, String station) {
+	super();
+	this.address = address;
+	this.station = station;
     }
 
-    public void setId(Integer id) {
-	this.id = id;
-    }
-
-    public Address getAddress() {
+    public String getAddress() {
 	return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(String address) {
 	this.address = address;
     }
 
-    public Integer getStation() {
+    public String getStation() {
 	return station;
     }
 
-    public void setStation(Integer station) {
+    public void setStation(String station) {
 	this.station = station;
     }
 
