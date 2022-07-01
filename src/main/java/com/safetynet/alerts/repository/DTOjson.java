@@ -1,4 +1,4 @@
-package com.safetynet.alerts.service;
+package com.safetynet.alerts.repository;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -7,28 +7,49 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Repository;
+
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
+import com.safetynet.alerts.model.JsonData;
 
-public class DTOService {
-    private String jsonPath;
+@Repository
+public class DTOjson implements IDTOjson {
+    private String jsonPath = "src/main/resources/data.json";
+    private static final Logger logger = LogManager.getLogger("AlertsApplication");
 
-    public DTOService(String jsonPath) {
-	this.setJsonPath(jsonPath);
+    private JsonData jsonData;
+
+    public DTOjson() throws FileNotFoundException, IOException {
+	this.readJson(this.jsonPath);
     }
 
+    @Override
+    public JsonData getJsonData() {
+	return jsonData;
+    }
+
+    @Override
+    public void setJsonData(JsonData jsonData) {
+	this.jsonData = jsonData;
+    }
+
+    @Override
     public String getJsonPath() {
 	return this.jsonPath;
     }
 
+    @Override
     public void setJsonPath(String jsonLocation) {
 	this.jsonPath = jsonPath;
     }
 
-    public Map<String, Any> readJson(String property) throws FileNotFoundException, IOException {
-	String jsonPath = this.getJsonPath();
+    @Override
+    public void readJson(String property) throws FileNotFoundException, IOException {
 
-	try (FileReader file = new FileReader(jsonPath)) {
+	try (FileReader file = new FileReader(this.getJsonPath())) {
 	    BufferedReader reader = new BufferedReader(file);
 	    String jsonString = "";
 	    String line = reader.readLine();
@@ -39,11 +60,11 @@ public class DTOService {
 	    }
 	    Map<String, Any> deserializedMap = JsonIterator.deserialize(jsonString).asMap();
 
-	    return deserializedMap;
+	    this.setJsonData(JsonIterator.deserialize(jsonString, JsonData.class));
 	}
     };
 
-    // For now, writing only on one property?
+    // @Todo Reserialize whole object
     public void writeJson(Map<String, String> values, String property) {
 	String jsonPath = this.getJsonPath();
 
@@ -57,7 +78,4 @@ public class DTOService {
 
     }
 
-    public void deleteJson(String[] values, String property) {
-
-    };
 }
