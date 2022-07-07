@@ -89,31 +89,14 @@ public class PersonService implements IPersonService {
     @Override
     public void deletePerson(Person personToDelete) {
 	List<Person> persons = getPersons();
-
-	logger.info(personToDelete.getFirstName());
-
-	logger.info(personToDelete.getLastName());
-
-	logger.info(persons.size());
-	logger.info(persons.get(0));
-
+	// @todos try catch for the case where the user is not found
 	for (int i = 0; i < persons.size(); i++) {
-	    logger.info(persons.get(i).getFirstName());
-	    logger.info(persons.get(i).getLastName());
-
-	    // @todo if not working
-	    if (persons.get(i).getFirstName() == personToDelete.getFirstName()
-		    && persons.get(i).getLastName() == personToDelete.getLastName()) {
+	    if (persons.get(i).getFirstName().equals(personToDelete.getFirstName())
+		    && persons.get(i).getLastName().equals(personToDelete.getLastName())) {
 		logger.info(i);
 		persons.remove(i);
 	    }
 	}
-
-//	boolean removed = persons.removeIf(person -> (person.getFirstName() == personToDelete.getFirstName()
-//		&& person.getLastName() == personToDelete.getLastName()));
-//	if (!removed)
-//	    throw new IllegalArgumentException("Person not found");
-
     }
 
 }
