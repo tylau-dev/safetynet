@@ -13,38 +13,39 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.safetynet.alerts.service.PersonService;
+import com.safetynet.alerts.service.FireStationService;
 
-@WebMvcTest(controllers = PersonController.class)
-public class PersonControllerTest {
-    final String contentBody = "{\"firstName\": \"John\", \"lastName\": \"Doe\", \"address\": \"11 Street\", \"city\": \"TestCity\", \"zip\": \"12345\", \"phone\": \"010101\", \"email\": \"john@doe.com\"}";
+@WebMvcTest(controllers = FireStationController.class)
+public class FireStationControllerTest {
+    final String contentBodyFireStation = "{\"address\": \"12 Street\", \"station\": \"2\"}";
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private PersonService personService;
+    private FireStationService fireStationService;
 
     @Test
-    public void testGetPerson() throws Exception {
-	mockMvc.perform(get("/person")).andExpect(status().isOk());
+    public void testGetFireStation() throws Exception {
+	mockMvc.perform(get("/firestation")).andExpect(status().isOk());
     }
 
     @Test
-    public void testPostPerson() throws Exception {
-	mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(contentBody))
+    public void testPostFireStation() throws Exception {
+	mockMvc.perform(post("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStation))
 		.andExpect(status().isCreated());
     }
 
     @Test
-    public void testPutPerson() throws Exception {
-	mockMvc.perform(put("/person").contentType(MediaType.APPLICATION_JSON).content(contentBody))
+    public void testPutFireStation() throws Exception {
+	mockMvc.perform(put("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStation))
 		.andExpect(status().isOk());
     }
 
     @Test
-    public void testDeletePerson() throws Exception {
-	mockMvc.perform(delete("/person").contentType(MediaType.APPLICATION_JSON).content(contentBody))
+    public void testDeleteFireStation() throws Exception {
+	mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStation))
 		.andExpect(status().isOk());
     }
+
 }

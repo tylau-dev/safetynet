@@ -93,7 +93,6 @@ public class PersonService implements IPersonService {
 	for (int i = 0; i < persons.size(); i++) {
 	    if (persons.get(i).getFirstName().equals(personToDelete.getFirstName())
 		    && persons.get(i).getLastName().equals(personToDelete.getLastName())) {
-		logger.info(i);
 		persons.remove(i);
 	    }
 	}
