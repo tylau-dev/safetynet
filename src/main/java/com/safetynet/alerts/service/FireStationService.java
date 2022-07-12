@@ -17,20 +17,20 @@ public class FireStationService implements IFireStationService {
     private static final Logger logger = LogManager.getLogger("FireStationService");
 
     @Override
-    public List<FireStation> getFirestations() {
+    public List<FireStation> getFireStations() {
 	return DTOjson.getJsonData().getFirestations();
     }
 
     @Override
     public void postFireStation(FireStation fireStationToAdd) {
-	List<FireStation> fireStations = getFirestations();
+	List<FireStation> fireStations = getFireStations();
 	fireStations.add(fireStationToAdd);
 	DTOjson.getJsonData().setFirestations(fireStations);
     }
 
     @Override
     public void putFireStation(FireStation fireStationToUpdate) {
-	List<FireStation> fireStations = getFirestations();
+	List<FireStation> fireStations = getFireStations();
 
 	for (FireStation fireStation : fireStations) {
 	    if (fireStation.getAddress() == fireStationToUpdate.getAddress()) {
@@ -41,7 +41,7 @@ public class FireStationService implements IFireStationService {
 
     @Override
     public void deleteFireStation(FireStation fireStationToDelete) {
-	List<FireStation> fireStations = getFirestations();
+	List<FireStation> fireStations = getFireStations();
 
 	for (int i = 0; i < fireStations.size(); i++) {
 	    if (fireStations.get(i).getAddress().equals(fireStationToDelete.getAddress())

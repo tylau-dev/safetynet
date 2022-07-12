@@ -26,7 +26,7 @@ public class FireStationController {
     @GetMapping("/firestation")
     public List<FireStation> listPersons() {
 	logger.info("GET request to /firestation");
-	return FireStaionService.getFirestations();
+	return FireStaionService.getFireStations();
     }
 
     @PostMapping(value = "/firestation")

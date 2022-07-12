@@ -5,7 +5,7 @@ import java.util.List;
 import com.safetynet.alerts.model.FireStation;
 
 public interface IFireStationService {
-    public List<FireStation> getFirestations();
+    public List<FireStation> getFireStations();
 
     public void postFireStation(FireStation fireStationToAdd);
 

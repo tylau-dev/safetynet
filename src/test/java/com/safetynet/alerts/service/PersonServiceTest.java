@@ -71,8 +71,7 @@ public class PersonServiceTest {
 	personService.deletePerson(personToAdd);
 
 	List<Person> listPerson = personService.getPersons();
-	String lastName = listPerson.get(listPerson.size() - 1).getLastName();
-	assertFalse(lastName.equals(personToAdd.getLastName()));
+	assertFalse(listPerson.get(listPerson.size() - 1).getLastName().equals(personToAdd.getLastName()));
     }
 
 }
