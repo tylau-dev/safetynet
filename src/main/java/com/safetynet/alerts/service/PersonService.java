@@ -12,8 +12,6 @@ import com.safetynet.alerts.repository.IDTOjson;
 
 @Service
 public class PersonService implements IPersonService {
-    // private static final Logger logger =
-    // LogManager.getLogger("AlertsApplication");
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PersonService");
@@ -24,39 +22,6 @@ public class PersonService implements IPersonService {
     public List<Person> getPersons() {
 	return DTOjson.getJsonData().getPersons();
     }
-
-//    @Override
-//    public Person getPerson(String firstName, String lastName) {
-//	final List<Person> persons = getPersons();
-//
-//	var result = new Person();
-//
-//	for (Person person : persons) {
-//	    String personFirstName = person.getFirstName();
-//	    String personLastName = person.getLastName();
-//
-//	    logger.info(firstName, lastName);
-//	    if (personFirstName == firstName) {
-//		logger.info("ok");
-//	    }
-//
-//	    if (personLastName == lastName) {
-//		logger.info("ok");
-//	    }
-//
-//	    if (person.getFirstName() == firstName && person.getLastName() == lastName) {
-//		result.setFirstName(person.getFirstName());
-//		result.setLastName(person.getLastName());
-//		result.setAddress(person.getAddress());
-//		result.setCity(person.getCity());
-//		result.setZip(person.getZip());
-//		result.setPhone(person.getPhone());
-//		result.setEmail(person.getEmail());
-//	    }
-//	}
-//
-//	return result;
-//    }
 
     @Override
     public void postPerson(Person personToAdd) {
@@ -93,7 +58,6 @@ public class PersonService implements IPersonService {
 	for (int i = 0; i < persons.size(); i++) {
 	    if (persons.get(i).getFirstName().equals(personToDelete.getFirstName())
 		    && persons.get(i).getLastName().equals(personToDelete.getLastName())) {
-		logger.info(i);
 		persons.remove(i);
 	    }
 	}
