@@ -35,6 +35,7 @@ public class MedicalRecordService implements IMedicalRecordService {
 	for (MedicalRecord medicalRecord : medicalRecords) {
 	    if (medicalRecord.getFirstName() == medicalRecordToUpdate.getFirstName()
 		    && medicalRecord.getLastName() == medicalRecordToUpdate.getLastName()) {
+		// @Todo vérifier l'edit de lists
 		medicalRecord.setBirthDate(medicalRecordToUpdate.getBirthDate());
 		medicalRecord.setMedications(medicalRecordToUpdate.getMedications());
 		medicalRecord.setAllergies(medicalRecordToUpdate.getAllergies());

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.service.IMedicalRecordService;
 
@@ -25,30 +24,30 @@ public class MedicalRecordController {
     private static final Logger logger = LogManager.getLogger("MedicalRecordController");
 
     @GetMapping("/medicalRecord")
-    public List<MedicalRecord> listPersons() {
+    public List<MedicalRecord> listMedicalRecords() {
 	logger.info("GET request to /medicalRecord");
 	return MedicalRecordService.getMedicalRecords();
     }
 
-    @PostMapping(value = "/firestation")
-    public ResponseEntity<String> addPerson(@RequestBody FireStation fireStation) {
-	logger.info("POST request to /firestation");
-	FireStaionService.postFireStation(fireStation);
-	return new ResponseEntity<String>("POST request to /firestation successful", HttpStatus.CREATED);
+    @PostMapping(value = "/medicalRecord")
+    public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+	logger.info("POST request to /medicalRecord");
+	MedicalRecordService.postMedicalRecord(medicalRecord);
+	return new ResponseEntity<String>("POST request to /medicalRecord successful", HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/firestation")
-    public ResponseEntity<String> updatePerson(@RequestBody FireStation fireStation) {
-	logger.info("PUT request to /firestation");
-	FireStaionService.postFireStation(fireStation);
-	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
+    @PutMapping(value = "/medicalRecord")
+    public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+	logger.info("PUT request to /medicalRecord");
+	MedicalRecordService.putMedicalRecord(medicalRecord);
+	return new ResponseEntity<String>("PUT request to /medicalRecord successful", HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/firestation")
-    public ResponseEntity<String> removePerson(@RequestBody FireStation fireStation) {
+    @DeleteMapping(value = "/medicalRecord")
+    public ResponseEntity<String> removeMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("DELETE request to /firestation");
-	FireStaionService.deleteFireStation(fireStation);
-	return new ResponseEntity<String>("DELETE request to /firestation successful", HttpStatus.OK);
+	MedicalRecordService.deleteMedicalRecord(medicalRecord);
+	return new ResponseEntity<String>("DELETE request to /medicalRecord successful", HttpStatus.OK);
     }
 
 }

@@ -39,7 +39,7 @@ public class FireStationController {
     @PutMapping(value = "/firestation")
     public ResponseEntity<String> updatePerson(@RequestBody FireStation fireStation) {
 	logger.info("PUT request to /firestation");
-	FireStationService.postFireStation(fireStation);
+	FireStationService.putFireStation(fireStation);
 	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
     }
 

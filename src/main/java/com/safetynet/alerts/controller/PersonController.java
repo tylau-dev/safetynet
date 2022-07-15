@@ -45,7 +45,7 @@ public class PersonController {
     @PutMapping(value = "/person")
     public ResponseEntity<String> updatePerson(@RequestBody Person person) {
 	logger.info("PUT request to /person");
-	PersonService.postPerson(person);
+	PersonService.putPerson(person);
 	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
     }
 
