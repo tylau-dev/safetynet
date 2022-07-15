@@ -15,38 +15,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.safetynet.alerts.model.FireStation;
-import com.safetynet.alerts.service.IFireStationService;
+import com.safetynet.alerts.model.MedicalRecord;
+import com.safetynet.alerts.service.IMedicalRecordService;
 
 @RestController
-public class FireStationController {
+public class MedicalRecordController {
     @Autowired
-    private IFireStationService FireStationService;
-    private static final Logger logger = LogManager.getLogger("FireStationController");
+    private IMedicalRecordService MedicalRecordService;
+    private static final Logger logger = LogManager.getLogger("MedicalRecordController");
 
-    @GetMapping("/firestation")
-    public List<FireStation> listPersons() {
-	logger.info("GET request to /firestation");
-	return FireStationService.getFireStations();
+    @GetMapping("/medicalRecord")
+    public List<MedicalRecord> listPersons() {
+	logger.info("GET request to /medicalRecord");
+	return MedicalRecordService.getMedicalRecords();
     }
 
     @PostMapping(value = "/firestation")
     public ResponseEntity<String> addPerson(@RequestBody FireStation fireStation) {
 	logger.info("POST request to /firestation");
-	FireStationService.postFireStation(fireStation);
+	FireStaionService.postFireStation(fireStation);
 	return new ResponseEntity<String>("POST request to /firestation successful", HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/firestation")
     public ResponseEntity<String> updatePerson(@RequestBody FireStation fireStation) {
 	logger.info("PUT request to /firestation");
-	FireStationService.postFireStation(fireStation);
+	FireStaionService.postFireStation(fireStation);
 	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/firestation")
     public ResponseEntity<String> removePerson(@RequestBody FireStation fireStation) {
 	logger.info("DELETE request to /firestation");
-	FireStationService.deleteFireStation(fireStation);
+	FireStaionService.deleteFireStation(fireStation);
 	return new ResponseEntity<String>("DELETE request to /firestation successful", HttpStatus.OK);
     }
 

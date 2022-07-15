@@ -4,14 +4,14 @@ public class MedicalRecord {
     public String firstName;
     public String lastName;
     public String birthDate;
-    public Medication[] medications;
-    public Allergy[] allergies;
+    public String[] medications;
+    public String[] allergies;
 
     public MedicalRecord() {
     }
 
-    public MedicalRecord(String firstName, String lastName, String birthDate, Medication[] medications,
-	    Allergy[] allergies) {
+    public MedicalRecord(String firstName, String lastName, String birthDate, String[] medications,
+	    String[] allergies) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
@@ -44,19 +44,19 @@ public class MedicalRecord {
 	this.birthDate = birthDate;
     }
 
-    public Medication[] getMedications() {
+    public String[] getMedications() {
 	return medications;
     }
 
-    public void setMedications(Medication[] medications) {
+    public void setMedications(String[] medications) {
 	this.medications = medications;
     }
 
-    public Allergy[] getAllergies() {
+    public String[] getAllergies() {
 	return allergies;
     }
 
-    public void setAllergies(Allergy[] allergies) {
+    public void setAllergies(String[] allergies) {
 	this.allergies = allergies;
     }
 
