@@ -1,12 +1,16 @@
-package com.safetynet.alerts.model.endpoint;
+package com.safetynet.alerts.model.status;
 
-public class FireStationCoveragePerson {
+import java.util.List;
+
+// personInfo
+public class PersonInfo {
     public String firstName;
     public String lastName;
     public String address;
     public String city;
     public String zip;
-    public String phone;
+    public List<String> medications;
+    public List<String> allergies;
 
     public String getFirstName() {
 	return firstName;
@@ -48,23 +52,32 @@ public class FireStationCoveragePerson {
 	this.zip = zip;
     }
 
-    public String getPhone() {
-	return phone;
+    public List<String> getMedications() {
+	return medications;
     }
 
-    public void setPhone(String phone) {
-	this.phone = phone;
+    public void setMedications(List<String> medications) {
+	this.medications = medications;
     }
 
-    public FireStationCoveragePerson(String firstName, String lastName, String address, String city, String zip,
-	    String phone) {
+    public List<String> getAllergies() {
+	return allergies;
+    }
+
+    public void setAllergies(List<String> allergies) {
+	this.allergies = allergies;
+    }
+
+    public PersonInfo(String firstName, String lastName, String address, String city, String zip,
+	    List<String> medications, List<String> allergies) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.address = address;
 	this.city = city;
 	this.zip = zip;
-	this.phone = phone;
+	this.medications = medications;
+	this.allergies = allergies;
     }
 
 }

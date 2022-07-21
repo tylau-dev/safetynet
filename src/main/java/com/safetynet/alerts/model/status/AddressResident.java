@@ -1,4 +1,4 @@
-package com.safetynet.alerts.model.endpoint;
+package com.safetynet.alerts.model.status;
 
 import java.util.List;
 

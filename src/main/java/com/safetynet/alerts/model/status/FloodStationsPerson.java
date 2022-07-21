@@ -1,14 +1,11 @@
-package com.safetynet.alerts.model.endpoint;
+package com.safetynet.alerts.model.status;
 
 import java.util.List;
 
-// personInfo
-public class PersonInfo {
+public class FloodStationsPerson {
     public String firstName;
     public String lastName;
-    public String address;
-    public String city;
-    public String zip;
+    public Integer age;
     public List<String> medications;
     public List<String> allergies;
 
@@ -28,28 +25,12 @@ public class PersonInfo {
 	this.lastName = lastName;
     }
 
-    public String getAddress() {
-	return address;
+    public Integer getAge() {
+	return age;
     }
 
-    public void setAddress(String address) {
-	this.address = address;
-    }
-
-    public String getCity() {
-	return city;
-    }
-
-    public void setCity(String city) {
-	this.city = city;
-    }
-
-    public String getZip() {
-	return zip;
-    }
-
-    public void setZip(String zip) {
-	this.zip = zip;
+    public void setAge(Integer age) {
+	this.age = age;
     }
 
     public List<String> getMedications() {
@@ -68,14 +49,12 @@ public class PersonInfo {
 	this.allergies = allergies;
     }
 
-    public PersonInfo(String firstName, String lastName, String address, String city, String zip,
-	    List<String> medications, List<String> allergies) {
+    public FloodStationsPerson(String firstName, String lastName, Integer age, List<String> medications,
+	    List<String> allergies) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
-	this.address = address;
-	this.city = city;
-	this.zip = zip;
+	this.age = age;
 	this.medications = medications;
 	this.allergies = allergies;
     }

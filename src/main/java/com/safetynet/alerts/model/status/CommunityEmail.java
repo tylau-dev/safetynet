@@ -1,4 +1,4 @@
-package com.safetynet.alerts.model.endpoint;
+package com.safetynet.alerts.model.status;
 
 // communityEmail
 public class CommunityEmail {

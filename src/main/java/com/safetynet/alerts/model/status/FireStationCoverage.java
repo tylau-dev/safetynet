@@ -1,18 +1,20 @@
-package com.safetynet.alerts.model.endpoint;
+package com.safetynet.alerts.model.status;
 
 import java.util.List;
 
+import com.safetynet.alerts.model.Person;
+
 //firestation?stationNumber
 public class FireStationCoverage {
-    public List<FireStationCoveragePerson> fireStationCoveragePerson;
+    public List<Person> fireStationCoveragePerson;
     public Integer adultNumber;
     public Integer childNumber;
 
-    public List<FireStationCoveragePerson> getFireStationCoveragePerson() {
+    public List<Person> getFireStationCoveragePerson() {
 	return fireStationCoveragePerson;
     }
 
-    public void setFireStationCoveragePerson(List<FireStationCoveragePerson> fireStationCoveragePerson) {
+    public void setFireStationCoveragePerson(List<Person> fireStationCoveragePerson) {
 	this.fireStationCoveragePerson = fireStationCoveragePerson;
     }
 
@@ -32,12 +34,15 @@ public class FireStationCoverage {
 	this.adultNumber = adultNumber;
     }
 
-    public FireStationCoverage(List<FireStationCoveragePerson> fireStationCoveragePerson, Integer adultNumber,
-	    Integer childNumber) {
+    public FireStationCoverage(List<Person> fireStationCoveragePerson, Integer adultNumber, Integer childNumber) {
 	super();
 	this.fireStationCoveragePerson = fireStationCoveragePerson;
 	this.adultNumber = adultNumber;
 	this.childNumber = childNumber;
+    }
+
+    public FireStationCoverage() {
+	super();
     }
 
 }
