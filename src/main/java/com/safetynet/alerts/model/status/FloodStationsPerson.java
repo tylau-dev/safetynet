@@ -5,6 +5,7 @@ import java.util.List;
 public class FloodStationsPerson {
     public String firstName;
     public String lastName;
+    public String phone;
     public Integer age;
     public List<String> medications;
     public List<String> allergies;
@@ -23,6 +24,14 @@ public class FloodStationsPerson {
 
     public void setLastName(String lastName) {
 	this.lastName = lastName;
+    }
+
+    public String getPhone() {
+	return phone;
+    }
+
+    public void setPhone(String phone) {
+	this.phone = phone;
     }
 
     public Integer getAge() {
@@ -49,14 +58,19 @@ public class FloodStationsPerson {
 	this.allergies = allergies;
     }
 
-    public FloodStationsPerson(String firstName, String lastName, Integer age, List<String> medications,
+    public FloodStationsPerson(String firstName, String lastName, String phone, Integer age, List<String> medications,
 	    List<String> allergies) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
+	this.phone = phone;
 	this.age = age;
 	this.medications = medications;
 	this.allergies = allergies;
+    }
+
+    public FloodStationsPerson() {
+	super();
     }
 
 }

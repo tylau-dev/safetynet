@@ -53,6 +53,8 @@ public class ChildAlertService implements IChildAlertService {
 	    }
 	}
 
+	// Looping through the resident and the MedicalRecord to retrieve BirthDate and
+	// check whether resident is a child, then append result List
 	for (Person resident : residents) {
 	    for (MedicalRecord medicalRecord : medicalRecords) {
 		if (resident.getFirstName().equals(medicalRecord.getFirstName())

@@ -3,7 +3,7 @@ package com.safetynet.alerts.model.status;
 import java.util.List;
 
 // fire?address
-public class AddressResident {
+public class Resident {
     public String firstName;
     public String lastName;
     public String phone;
@@ -11,7 +11,7 @@ public class AddressResident {
     public List<String> medications;
     public List<String> allergies;
 
-    public AddressResident(String firstName, String lastName, String phone, Integer age, List<String> medications,
+    public Resident(String firstName, String lastName, String phone, Integer age, List<String> medications,
 	    List<String> allergies) {
 	super();
 	this.firstName = firstName;
