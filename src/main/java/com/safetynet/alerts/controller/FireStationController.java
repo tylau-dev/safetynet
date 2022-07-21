@@ -20,33 +20,33 @@ import com.safetynet.alerts.service.IFireStationService;
 @RestController
 public class FireStationController {
     @Autowired
-    private IFireStationService FireStaionService;
+    private IFireStationService FireStationService;
     private static final Logger logger = LogManager.getLogger("FireStationController");
 
     @GetMapping("/firestation")
     public List<FireStation> listPersons() {
 	logger.info("GET request to /firestation");
-	return FireStaionService.getFireStations();
+	return FireStationService.getFireStations();
     }
 
     @PostMapping(value = "/firestation")
     public ResponseEntity<String> addPerson(@RequestBody FireStation fireStation) {
 	logger.info("POST request to /firestation");
-	FireStaionService.postFireStation(fireStation);
+	FireStationService.postFireStation(fireStation);
 	return new ResponseEntity<String>("POST request to /firestation successful", HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/firestation")
     public ResponseEntity<String> updatePerson(@RequestBody FireStation fireStation) {
 	logger.info("PUT request to /firestation");
-	FireStaionService.postFireStation(fireStation);
+	FireStationService.putFireStation(fireStation);
 	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/firestation")
     public ResponseEntity<String> removePerson(@RequestBody FireStation fireStation) {
 	logger.info("DELETE request to /firestation");
-	FireStaionService.deleteFireStation(fireStation);
+	FireStationService.deleteFireStation(fireStation);
 	return new ResponseEntity<String>("DELETE request to /firestation successful", HttpStatus.OK);
     }
 

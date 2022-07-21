@@ -1,23 +1,23 @@
-package com.safetynet.alerts.model;
+package com.safetynet.alerts.model.status;
 
 import java.util.List;
 
-public class MedicalRecord {
+// fire?address
+public class Resident {
     public String firstName;
     public String lastName;
-    public String birthdate;
+    public String phone;
+    public Integer age;
     public List<String> medications;
     public List<String> allergies;
 
-    public MedicalRecord() {
-    }
-
-    public MedicalRecord(String firstName, String lastName, String birthdate, List<String> medications,
+    public Resident(String firstName, String lastName, String phone, Integer age, List<String> medications,
 	    List<String> allergies) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
-	this.birthdate = birthdate;
+	this.phone = phone;
+	this.age = age;
 	this.medications = medications;
 	this.allergies = allergies;
     }
@@ -38,12 +38,20 @@ public class MedicalRecord {
 	this.lastName = lastName;
     }
 
-    public String getBirthDate() {
-	return birthdate;
+    public String getPhone() {
+	return phone;
     }
 
-    public void setBirthDate(String birthdate) {
-	this.birthdate = birthdate;
+    public void setPhone(String phone) {
+	this.phone = phone;
+    }
+
+    public Integer getAge() {
+	return age;
+    }
+
+    public void setAge(Integer age) {
+	this.age = age;
     }
 
     public List<String> getMedications() {

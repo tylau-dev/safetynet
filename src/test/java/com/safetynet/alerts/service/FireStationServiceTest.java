@@ -18,7 +18,7 @@ import com.safetynet.alerts.model.FireStation;
 public class FireStationServiceTest {
     @Autowired
     private FireStationService fireStationService;
-    private static FireStation fireStationToAdd = new FireStation();;
+    private static FireStation fireStationToAdd = new FireStation();
 
     @BeforeAll
     public static void setup() {
