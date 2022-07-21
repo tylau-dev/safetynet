@@ -3,7 +3,7 @@ package com.safetynet.alerts.model.status;
 import java.util.List;
 
 // flood/stations?
-public class FloodStations {
+public class FloodStation {
     public String address;
     public List<FloodStationsPerson> floodStationsPersons;
 
@@ -23,9 +23,13 @@ public class FloodStations {
 	this.floodStationsPersons = floodStationsPersons;
     }
 
-    public FloodStations(String address, List<FloodStationsPerson> floodStationsPersons) {
+    public FloodStation(String address, List<FloodStationsPerson> floodStationsPersons) {
 	super();
 	this.address = address;
 	this.floodStationsPersons = floodStationsPersons;
+    }
+
+    public FloodStation() {
+	super();
     }
 }

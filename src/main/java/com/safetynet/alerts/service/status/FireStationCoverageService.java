@@ -40,7 +40,7 @@ public class FireStationCoverageService implements IFireStationCoverageService {
 		filteredFireStationAddresses.add(fireStation.getAddress());
 	    }
 	}
-	// Loop through the list of Persons to retrieve the concerned Persons
+	// Loop through the list of Persons to retrieve the ones living in the address
 	List<Person> filteredPersons = new ArrayList<Person>();
 	for (Person person : persons) {
 	    if (filteredFireStationAddresses.contains(person.getAddress())) {

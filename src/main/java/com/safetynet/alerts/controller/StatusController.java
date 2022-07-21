@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.safetynet.alerts.model.status.ChildAlert;
 import com.safetynet.alerts.model.status.FireAddressAlert;
 import com.safetynet.alerts.model.status.FireStationCoverage;
+import com.safetynet.alerts.model.status.FloodStation;
 import com.safetynet.alerts.model.status.PhoneAlert;
 import com.safetynet.alerts.service.status.IChildAlertService;
 import com.safetynet.alerts.service.status.IFireAddressAlertService;
 import com.safetynet.alerts.service.status.IFireStationCoverageService;
+import com.safetynet.alerts.service.status.IFloodStationsService;
 import com.safetynet.alerts.service.status.IPhoneAlertService;
 
 @RestController
@@ -33,6 +35,9 @@ public class StatusController {
 
     @Autowired
     private IFireAddressAlertService FireAddressAlertService;
+
+    @Autowired
+    private IFloodStationsService FloodStationsService;
 
     private static final Logger logger = LogManager.getLogger("EndPointController");
 
@@ -60,9 +65,9 @@ public class StatusController {
 	return FireAddressAlertService.getFireAddressAlert(address);
     }
 
-//    @RequestMapping(YOUR_REQUEST_MAPPINGS)
-//    public void testArrayOfValues(@RequestParam List<String> values) 
-//    {
-//       // Handle values here
-//    }
+    @RequestMapping(value = "/flood/stations", method = RequestMethod.GET, params = { "stations" })
+    public List<FloodStation> listFloodStations(@RequestParam(value = "stations") List<Integer> stations) {
+	logger.info(String.format("GET request to /flood/stations?stations=%s", stations));
+	return FloodStationsService.getFloodStation(stations);
+    }
 }
