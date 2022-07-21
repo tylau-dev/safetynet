@@ -14,11 +14,13 @@ import com.safetynet.alerts.model.status.ChildAlert;
 import com.safetynet.alerts.model.status.FireAddressAlert;
 import com.safetynet.alerts.model.status.FireStationCoverage;
 import com.safetynet.alerts.model.status.FloodStation;
+import com.safetynet.alerts.model.status.PersonInfo;
 import com.safetynet.alerts.model.status.PhoneAlert;
 import com.safetynet.alerts.service.status.IChildAlertService;
 import com.safetynet.alerts.service.status.IFireAddressAlertService;
 import com.safetynet.alerts.service.status.IFireStationCoverageService;
 import com.safetynet.alerts.service.status.IFloodStationsService;
+import com.safetynet.alerts.service.status.IPersonInfoService;
 import com.safetynet.alerts.service.status.IPhoneAlertService;
 
 @RestController
@@ -38,6 +40,9 @@ public class StatusController {
 
     @Autowired
     private IFloodStationsService FloodStationsService;
+
+    @Autowired
+    private IPersonInfoService PersonInfoService;
 
     private static final Logger logger = LogManager.getLogger("EndPointController");
 
@@ -69,5 +74,12 @@ public class StatusController {
     public List<FloodStation> listFloodStations(@RequestParam(value = "stations") List<Integer> stations) {
 	logger.info(String.format("GET request to /flood/stations?stations=%s", stations));
 	return FloodStationsService.getFloodStation(stations);
+    }
+
+    @RequestMapping(value = "/personInfo", method = RequestMethod.GET, params = { "firstName", "lastName" })
+    public List<PersonInfo> listPersonInfo(@RequestParam(value = "firstName") String firstName,
+	    @RequestParam(value = "lastName") String lastName) {
+	logger.info(String.format("GET request to /personInfo?firstName=%s&lastName=%s", firstName, lastName));
+	return PersonInfoService.getPersonInfo(firstName, lastName);
     }
 }
