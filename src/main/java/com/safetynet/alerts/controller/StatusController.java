@@ -11,12 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.safetynet.alerts.model.status.ChildAlert;
+import com.safetynet.alerts.model.status.CommunityEmail;
 import com.safetynet.alerts.model.status.FireAddressAlert;
 import com.safetynet.alerts.model.status.FireStationCoverage;
 import com.safetynet.alerts.model.status.FloodStation;
 import com.safetynet.alerts.model.status.PersonInfo;
 import com.safetynet.alerts.model.status.PhoneAlert;
 import com.safetynet.alerts.service.status.IChildAlertService;
+import com.safetynet.alerts.service.status.ICommunityEmailService;
 import com.safetynet.alerts.service.status.IFireAddressAlertService;
 import com.safetynet.alerts.service.status.IFireStationCoverageService;
 import com.safetynet.alerts.service.status.IFloodStationsService;
@@ -43,6 +45,9 @@ public class StatusController {
 
     @Autowired
     private IPersonInfoService PersonInfoService;
+
+    @Autowired
+    private ICommunityEmailService CommunityEmailService;
 
     private static final Logger logger = LogManager.getLogger("EndPointController");
 
@@ -82,4 +87,11 @@ public class StatusController {
 	logger.info(String.format("GET request to /personInfo?firstName=%s&lastName=%s", firstName, lastName));
 	return PersonInfoService.getPersonInfo(firstName, lastName);
     }
+
+    @RequestMapping(value = "/communityEmail", method = RequestMethod.GET, params = { "city" })
+    public List<CommunityEmail> listCommunityEmail(@RequestParam(value = "city") String city) {
+	logger.info(String.format("GET request to /communityEmail?city=%s", city));
+	return CommunityEmailService.getCommunityEmail(city);
+    }
+
 }

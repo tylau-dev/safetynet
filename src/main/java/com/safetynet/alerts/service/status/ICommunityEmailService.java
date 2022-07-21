@@ -6,5 +6,4 @@ import com.safetynet.alerts.model.status.CommunityEmail;
 
 public interface ICommunityEmailService {
     List<CommunityEmail> getCommunityEmail(String city);
-
 }
