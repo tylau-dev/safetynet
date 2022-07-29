@@ -17,12 +17,18 @@ import com.safetynet.alerts.model.status.ChildAlert;
 import com.safetynet.alerts.repository.IDTOjson;
 import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into ChildAlert
+ */
 @Service
 public class ChildAlertService implements IChildAlertService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("ChildAlertServiceService");
 
+    /*
+     * @Param String address
+     */
     @Override
     public List<ChildAlert> getChildAlert(String address) {
 	List<ChildAlert> resultChildAlert = new ArrayList<ChildAlert>();

@@ -10,19 +10,28 @@ import org.springframework.stereotype.Service;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.IDTOjson;
 
+/*
+ * Service for CRUD operations on Persons
+ */
 @Service
 public class PersonService implements IPersonService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PersonService");
 
-    // @todos trycatch
-
+    /*
+     * Retrieve Persons from DTO
+     */
     @Override
     public List<Person> getPersons() {
 	return DTOjson.getJsonData().getPersons();
     }
 
+    /*
+     * Add Person from JSON data
+     * 
+     * @Param Person personToAdd
+     */
     @Override
     public void postPerson(Person personToAdd) {
 	List<Person> persons = getPersons();
@@ -30,6 +39,11 @@ public class PersonService implements IPersonService {
 	DTOjson.getJsonData().setPersons(persons);
     }
 
+    /*
+     * Edit Person from JSON data
+     * 
+     * @Param Person personToUpdate
+     */
     @Override
     public void putPerson(Person personToUpdate) {
 	List<Person> persons = getPersons();
@@ -51,6 +65,11 @@ public class PersonService implements IPersonService {
 	}
     }
 
+    /*
+     * Delete Person from JSON data
+     * 
+     * @Param Person personToDelete
+     */
     @Override
     public void deletePerson(Person personToDelete) {
 	List<Person> persons = getPersons();

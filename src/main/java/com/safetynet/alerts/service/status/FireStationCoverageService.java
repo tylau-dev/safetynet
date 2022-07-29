@@ -16,12 +16,18 @@ import com.safetynet.alerts.model.status.FireStationCoverage;
 import com.safetynet.alerts.repository.IDTOjson;
 import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into FireStationCoverage
+ */
 @Service
 public class FireStationCoverageService implements IFireStationCoverageService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("FireStationCoverageService");
 
+    /*
+     * @Param int stationNumber
+     */
     @Override
     public FireStationCoverage getFireStationCoverage(int stationNumber) {
 	// Initialize result elements

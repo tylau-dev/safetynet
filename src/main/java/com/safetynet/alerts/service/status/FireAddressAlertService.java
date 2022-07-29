@@ -17,6 +17,9 @@ import com.safetynet.alerts.model.status.Resident;
 import com.safetynet.alerts.repository.IDTOjson;
 import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into FireAddressAlert
+ */
 @Service
 public class FireAddressAlertService implements IFireAddressAlertService {
     @Autowired

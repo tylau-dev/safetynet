@@ -10,17 +10,28 @@ import org.springframework.stereotype.Service;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.IDTOjson;
 
+/*
+ * Service for CRUD operations on MedicalRecords
+ */
 @Service
 public class MedicalRecordService implements IMedicalRecordService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("MedicalRecordService");
 
+    /*
+     * Retrieve MedicalRecords from DTO
+     */
     @Override
     public List<MedicalRecord> getMedicalRecords() {
 	return DTOjson.getJsonData().getMedicalRecords();
     }
 
+    /*
+     * Add MedicalRecord from JSON data
+     * 
+     * @Param MedicalRecord medicalRecordToAdd
+     */
     @Override
     public void postMedicalRecord(MedicalRecord medicalRecordToAdd) {
 	List<MedicalRecord> medicalRecords = getMedicalRecords();
@@ -28,6 +39,11 @@ public class MedicalRecordService implements IMedicalRecordService {
 	DTOjson.getJsonData().setMedicalRecords(medicalRecords);
     }
 
+    /*
+     * Edit MedicalRecord from JSON data
+     * 
+     * @Param MedicalRecord medicalRecordToUpdate
+     */
     @Override
     public void putMedicalRecord(MedicalRecord medicalRecordToUpdate) {
 	List<MedicalRecord> medicalRecords = getMedicalRecords();
@@ -45,6 +61,11 @@ public class MedicalRecordService implements IMedicalRecordService {
 	}
     }
 
+    /*
+     * Delete MedicalRecord from JSON data
+     * 
+     * @Param MedicalRecord medicalRecordToDelete
+     */
     @Override
     public void deleteMedicalRecord(MedicalRecord medicalRecordToDelete) {
 	List<MedicalRecord> medicalRecords = getMedicalRecords();

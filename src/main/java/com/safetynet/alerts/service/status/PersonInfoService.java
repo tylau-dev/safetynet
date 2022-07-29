@@ -15,12 +15,18 @@ import com.safetynet.alerts.model.status.PersonInfo;
 import com.safetynet.alerts.repository.IDTOjson;
 import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into PersonInfo
+ */
 @Service
 public class PersonInfoService implements IPersonInfoService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PersonInfoService");
 
+    /*
+     * @Param String firstName, String lastName
+     */
     @Override
     public List<PersonInfo> getPersonInfo(String firstName, String lastName) {
 	List<PersonInfo> resultPersonInfo = new ArrayList<PersonInfo>();

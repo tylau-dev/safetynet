@@ -17,12 +17,18 @@ import com.safetynet.alerts.model.status.FloodStationsPerson;
 import com.safetynet.alerts.repository.IDTOjson;
 import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into FloodStation
+ */
 @Service
 public class FloodStationsService implements IFloodStationsService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("FloodStationsService");
 
+    /*
+     * @Param List<Integer> stationNumbers
+     */
     @Override
     public List<FloodStation> getFloodStation(List<Integer> stationNumbers) {
 	List<FloodStation> resultFloodStations = new ArrayList<FloodStation>();
