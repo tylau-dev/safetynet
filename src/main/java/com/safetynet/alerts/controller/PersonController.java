@@ -27,7 +27,9 @@ public class PersonController {
     @GetMapping("/person")
     public List<Person> listPersons() {
 	logger.info("GET request to /person");
-	return PersonService.getPersons();
+	List<Person> personList = PersonService.getPersons();
+	logger.info("PersonService.getPerson success");
+	return personList;
     }
 
 //    @GetMapping(value = "/person/{firstName}/{lastName}")
@@ -38,22 +40,50 @@ public class PersonController {
     @PostMapping(value = "/person")
     public ResponseEntity<String> addPerson(@RequestBody Person person) {
 	logger.info("POST request to /person");
-	PersonService.postPerson(person);
-	return new ResponseEntity<String>("POST request to /person successful", HttpStatus.CREATED);
+	try {
+	    if (person.getFirstName().equals(null) || person.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    PersonService.postPerson(person);
+	    logger.info("PersonService.postPerson success");
+	    return new ResponseEntity<String>("POST request to /person successful", HttpStatus.CREATED);
+	} catch (Exception e) {
+	    logger.error("PersonService.postPerson failed: Missing Values");
+	    return new ResponseEntity<String>("POST request to /person failed: Missing Values", HttpStatus.BAD_REQUEST);
+	}
     }
 
     @PutMapping(value = "/person")
     public ResponseEntity<String> updatePerson(@RequestBody Person person) {
 	logger.info("PUT request to /person");
-	PersonService.putPerson(person);
-	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
+	try {
+	    if (person.getFirstName().equals(null) || person.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    PersonService.putPerson(person);
+	    logger.info("PersonService.putPerson success");
+	    return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("PersonService.putPerson failed: Missing Values");
+	    return new ResponseEntity<String>("PUT request to /person failed: Missing Values", HttpStatus.BAD_REQUEST);
+	}
     }
 
     @DeleteMapping(value = "/person")
     public ResponseEntity<String> removePerson(@RequestBody Person person) {
 	logger.info("DELETE request to /person");
-	PersonService.deletePerson(person);
-	return new ResponseEntity<String>("DELETE request to /person successful", HttpStatus.OK);
+	try {
+	    if (person.getFirstName().equals(null) || person.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    PersonService.deletePerson(person);
+	    logger.info("PersonService.deletePerson success");
+	    return new ResponseEntity<String>("DELETE request to /person successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("PersonService.deletePerson failed: Missing Values");
+	    return new ResponseEntity<String>("DELETE request to /person failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
 }

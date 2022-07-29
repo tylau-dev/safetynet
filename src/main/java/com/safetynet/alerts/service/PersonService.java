@@ -35,17 +35,17 @@ public class PersonService implements IPersonService {
 	List<Person> persons = getPersons();
 
 	for (Person person : persons) {
-	    if (person.getFirstName() == personToUpdate.getFirstName()
-		    && person.getLastName() == personToUpdate.getLastName()) {
-		if (personToUpdate.getAddress() != null)
+	    if (person.getFirstName().equals(personToUpdate.getFirstName())
+		    && person.getLastName().equals(personToUpdate.getLastName())) {
+		if (!personToUpdate.getAddress().equals(null))
 		    person.setAddress(personToUpdate.getAddress());
-		if (personToUpdate.getCity() != null)
+		if (!personToUpdate.getCity().equals(null))
 		    person.setCity(personToUpdate.getCity());
-		if (personToUpdate.getZip() != null)
+		if (!personToUpdate.getZip().equals(null))
 		    person.setZip(personToUpdate.getZip());
-		if (personToUpdate.getEmail() != null)
+		if (!personToUpdate.getEmail().equals(null))
 		    person.setEmail(personToUpdate.getEmail());
-		if (personToUpdate.getPhone() != null)
+		if (!personToUpdate.getPhone().equals(null))
 		    person.setPhone(personToUpdate.getPhone());
 	    }
 	}
@@ -54,11 +54,12 @@ public class PersonService implements IPersonService {
     @Override
     public void deletePerson(Person personToDelete) {
 	List<Person> persons = getPersons();
-	// @todos try catch for the case where the user is not found
+	Boolean personExist = false;
 	for (int i = 0; i < persons.size(); i++) {
 	    if (persons.get(i).getFirstName().equals(personToDelete.getFirstName())
 		    && persons.get(i).getLastName().equals(personToDelete.getLastName())) {
 		persons.remove(i);
+		personExist = true;
 	    }
 	}
     }

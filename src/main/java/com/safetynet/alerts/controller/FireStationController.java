@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,39 +19,65 @@ import com.safetynet.alerts.service.IFireStationService;
 
 @RestController
 public class FireStationController {
+    @Autowired
     private IFireStationService FireStationService;
-
-    public FireStationController(IFireStationService fireStationService) {
-	this.FireStationService = fireStationService;
-    }
-
     private static final Logger logger = LogManager.getLogger("FireStationController");
 
     @GetMapping("/firestation")
-    public List<FireStation> listPersons() {
+    public List<FireStation> listFireStations() {
 	logger.info("GET request to /firestation");
 	return FireStationService.getFireStations();
     }
 
     @PostMapping(value = "/firestation")
-    public ResponseEntity<String> addPerson(@RequestBody FireStation fireStation) {
+    public ResponseEntity<String> addFireStation(@RequestBody FireStation fireStation) {
 	logger.info("POST request to /firestation");
-	FireStationService.postFireStation(fireStation);
-	return new ResponseEntity<String>("POST request to /firestation successful", HttpStatus.CREATED);
+	try {
+	    if (fireStation.getAddress().equals(null)) {
+		throw new Exception();
+	    }
+	    FireStationService.postFireStation(fireStation);
+	    logger.info("FireStationService.postFireStation success");
+	    return new ResponseEntity<String>("POST request to /firestation successful", HttpStatus.CREATED);
+	} catch (Exception e) {
+	    logger.error("FireStationService.postFireStation failed: Missing Values");
+	    return new ResponseEntity<String>("POST request to /firestation failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
     @PutMapping(value = "/firestation")
-    public ResponseEntity<String> updatePerson(@RequestBody FireStation fireStation) {
+    public ResponseEntity<String> updateFireStation(@RequestBody FireStation fireStation) {
 	logger.info("PUT request to /firestation");
-	FireStationService.putFireStation(fireStation);
-	return new ResponseEntity<String>("PUT request to /person successful", HttpStatus.OK);
+	try {
+	    if (fireStation.getAddress().equals(null)) {
+		throw new Exception();
+	    }
+	    FireStationService.putFireStation(fireStation);
+	    logger.info("FireStationService.putFireStation success");
+	    return new ResponseEntity<String>("PUT request to /firestation successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("FireStationService.putFireStation failed: Missing Values");
+	    return new ResponseEntity<String>("PUT request to /firestation failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
     @DeleteMapping(value = "/firestation")
-    public ResponseEntity<String> removePerson(@RequestBody FireStation fireStation) {
+    public ResponseEntity<String> removeFireStation(@RequestBody FireStation fireStation) {
 	logger.info("DELETE request to /firestation");
-	FireStationService.deleteFireStation(fireStation);
-	return new ResponseEntity<String>("DELETE request to /firestation successful", HttpStatus.OK);
+	try {
+	    if (fireStation.getAddress().equals(null)) {
+		throw new Exception();
+	    }
+	    FireStationService.deleteFireStation(fireStation);
+	    logger.info("FireStationService.deleteFireStation success");
+	    return new ResponseEntity<String>("DELETE request to /firestation successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("FireStationService.postFireStation failed: Missing Values");
+	    return new ResponseEntity<String>("DELETE request to /firestation failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
 }

@@ -33,7 +33,7 @@ public class FireStationService implements IFireStationService {
 	List<FireStation> fireStations = getFireStations();
 
 	for (FireStation fireStation : fireStations) {
-	    if (fireStation.getAddress() == fireStationToUpdate.getAddress()) {
+	    if (fireStation.getAddress().equals(fireStationToUpdate.getAddress())) {
 		fireStation.setStation(fireStationToUpdate.getStation());
 	    }
 	}

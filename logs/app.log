@@ -53,3 +53,169 @@
 2022-07-29 13:15:27.654 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
 2022-07-29 13:15:27.656 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
 2022-07-29 13:15:27.771 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:31)] - GET request to /firestation
+2022-07-29 13:48:41.985 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 3336 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 13:48:41.999 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 13:48:42.955 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-29 13:48:42.977 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-07-29 13:48:43.602 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 13:48:43.618 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:48:43.619 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 13:48:43.619 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 13:48:43.790 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 13:48:43.790 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1738 ms
+2022-07-29 13:48:44.036 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110)] - HikariPool-1 - Starting...
+2022-07-29 13:48:44.236 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123)] - HikariPool-1 - Start completed.
+2022-07-29 13:48:44.302 INFO [main] [org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-29 13:48:44.372 INFO [main] [org.hibernate.Version.logVersion(Version.java:44)] - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-29 13:48:44.630 INFO [main] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:56)] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-29 13:48:44.764 INFO [main] [org.hibernate.dialect.Dialect.<init>(Dialect.java:175)] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-29 13:48:44.948 INFO [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-29 13:48:44.960 INFO [main] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 13:48:45.094 WARN [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:219)] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-29 13:48:45.532 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 13:48:45.558 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:48:45.587 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 13:48:45.607 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 3.961 seconds (JVM running for 4.706)
+2022-07-29 13:49:19.269 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 19040 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 13:49:19.279 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 13:49:20.462 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 13:49:20.489 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:49:20.489 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 13:49:20.490 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 13:49:20.589 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 13:49:20.589 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1259 ms
+2022-07-29 13:49:21.221 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 13:49:21.245 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:49:21.270 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 13:49:21.284 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.341 seconds (JVM running for 3.111)
+2022-07-29 13:49:28.239 INFO [http-nio-8080-exec-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 13:49:28.240 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 13:49:28.241 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 13:49:28.270 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 13:49:39.255 WARN [http-nio-8080-exec-3] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208)] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 2]]
+2022-07-29 13:55:16.632 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 18524 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 13:55:16.644 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 13:55:17.850 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 13:55:17.870 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:55:17.871 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 13:55:17.873 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 13:55:17.964 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 13:55:17.965 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1272 ms
+2022-07-29 13:55:18.554 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 13:55:18.581 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:55:18.605 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 13:55:18.618 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.299 seconds (JVM running for 3.054)
+2022-07-29 13:55:22.281 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 13:55:22.282 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 13:55:22.283 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 13:55:22.364 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:34)] - POST request to /firestation
+2022-07-29 13:55:22.364 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:37)] - FireStationService.postFireStation success
+2022-07-29 13:55:30.253 INFO [http-nio-8080-exec-3] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 13:55:41.008 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:34)] - POST request to /firestation
+2022-07-29 13:55:41.008 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:37)] - FireStationService.postFireStation success
+2022-07-29 13:56:01.994 INFO [http-nio-8080-exec-5] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 13:56:13.037 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:34)] - POST request to /firestation
+2022-07-29 13:56:13.037 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:37)] - FireStationService.postFireStation success
+2022-07-29 14:00:43.946 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 12268 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 14:00:43.958 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 14:00:45.181 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 14:00:45.213 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:00:45.214 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 14:00:45.215 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 14:00:45.325 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 14:00:45.325 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1320 ms
+2022-07-29 14:00:45.958 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 14:00:45.985 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:00:46.010 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 14:00:46.023 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.4 seconds (JVM running for 3.162)
+2022-07-29 14:00:49.046 INFO [http-nio-8080-exec-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 14:00:49.046 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 14:00:49.047 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 14:00:49.141 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:34)] - POST request to /firestation
+2022-07-29 14:00:49.142 ERROR [http-nio-8080-exec-2] [com.safetynet.alerts.service.FireStationService.postFireStation(FireStationService.java:34)] - Missing Values in Post Request
+2022-07-29 14:00:49.142 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:37)] - FireStationService.postFireStation success
+2022-07-29 14:13:33.949 INFO [http-nio-8080-exec-5] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:29)] - GET request to /person
+2022-07-29 14:13:53.774 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:40)] - POST request to /person
+2022-07-29 14:13:59.894 INFO [http-nio-8080-exec-7] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:29)] - GET request to /person
+2022-07-29 14:14:15.376 INFO [http-nio-8080-exec-8] [com.safetynet.alerts.controller.PersonController.updatePerson(PersonController.java:47)] - PUT request to /person
+2022-07-29 14:14:19.722 INFO [http-nio-8080-exec-9] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:29)] - GET request to /person
+2022-07-29 14:14:32.177 INFO [http-nio-8080-exec-10] [com.safetynet.alerts.controller.PersonController.removePerson(PersonController.java:54)] - DELETE request to /person
+2022-07-29 14:14:35.516 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:29)] - GET request to /person
+2022-07-29 14:14:48.306 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.StatusController.listFloodStations(StatusController.java:82)] - GET request to /flood/stations?stations=[1, 2, 3]
+2022-07-29 14:36:06.554 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 15036 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 14:36:06.567 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 14:36:07.812 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 14:36:07.839 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:36:07.839 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 14:36:07.840 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 14:36:07.934 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 14:36:07.934 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1316 ms
+2022-07-29 14:36:08.558 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 14:36:08.594 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:36:08.625 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 14:36:08.644 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.412 seconds (JVM running for 3.181)
+2022-07-29 14:36:15.533 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 14:36:15.533 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 14:36:15.534 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 0 ms
+2022-07-29 14:36:15.610 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:36)] - POST request to /firestation
+2022-07-29 14:36:15.610 ERROR [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:44)] - FireStationService.postFireStation failed
+2022-07-29 14:36:39.015 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 19928 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 14:36:39.027 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 14:36:40.406 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 14:36:40.424 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:36:40.425 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 14:36:40.426 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 14:36:40.546 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 14:36:40.547 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1460 ms
+2022-07-29 14:36:41.258 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 14:36:41.292 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:36:41.322 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 14:36:41.337 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.747 seconds (JVM running for 3.92)
+2022-07-29 14:37:03.188 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 14:37:03.189 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 14:37:03.190 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 14:37:15.188 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:36)] - POST request to /firestation
+2022-07-29 14:37:15.189 ERROR [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:44)] - FireStationService.postFireStation failed
+2022-07-29 14:39:56.430 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 19316 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 14:39:56.442 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 14:39:57.659 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 14:39:57.689 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:39:57.690 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 14:39:57.690 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 14:39:57.793 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 14:39:57.794 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1306 ms
+2022-07-29 14:39:58.397 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 14:39:58.418 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:39:58.446 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 14:39:58.461 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.371 seconds (JVM running for 3.144)
+2022-07-29 14:40:01.723 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 14:40:01.723 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 14:40:01.724 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 14:40:01.829 ERROR [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:42)] - FireStationService.postFireStation failed
+2022-07-29 14:44:28.077 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.updatePerson(FireStationController.java:49)] - PUT request to /firestation
+2022-07-29 14:44:31.004 INFO [http-nio-8080-exec-5] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 14:44:36.435 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.FireStationController.addPerson(FireStationController.java:39)] - FireStationService.postFireStation success
+2022-07-29 14:44:39.615 INFO [http-nio-8080-exec-7] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 14:44:50.107 INFO [http-nio-8080-exec-8] [com.safetynet.alerts.controller.FireStationController.updatePerson(FireStationController.java:49)] - PUT request to /firestation
+2022-07-29 14:44:53.072 INFO [http-nio-8080-exec-9] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 14:47:13.727 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 3232 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 14:47:13.740 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 14:47:15.626 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 14:47:15.659 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:47:15.660 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 14:47:15.661 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 14:47:15.803 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 14:47:15.804 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 2005 ms
+2022-07-29 14:47:17.004 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 14:47:17.038 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 14:47:17.071 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 14:47:17.091 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 3.747 seconds (JVM running for 4.727)
+2022-07-29 14:47:27.855 INFO [http-nio-8080-exec-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 14:47:27.856 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 14:47:27.857 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 14:47:27.946 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.FireStationController.addFireStation(FireStationController.java:34)] - POST request to /firestation
+2022-07-29 14:47:27.946 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.FireStationController.addFireStation(FireStationController.java:40)] - FireStationService.postFireStation success
+2022-07-29 14:47:30.546 INFO [http-nio-8080-exec-3] [com.safetynet.alerts.controller.FireStationController.listFireStations(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 14:47:38.216 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.updateFireStation(FireStationController.java:50)] - PUT request to /firestation
+2022-07-29 14:47:38.216 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.updateFireStation(FireStationController.java:56)] - FireStationService.putFireStation success
+2022-07-29 14:47:41.862 INFO [http-nio-8080-exec-7] [com.safetynet.alerts.controller.FireStationController.listFireStations(FireStationController.java:28)] - GET request to /firestation

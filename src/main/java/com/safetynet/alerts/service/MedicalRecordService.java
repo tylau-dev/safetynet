@@ -33,12 +33,14 @@ public class MedicalRecordService implements IMedicalRecordService {
 	List<MedicalRecord> medicalRecords = getMedicalRecords();
 
 	for (MedicalRecord medicalRecord : medicalRecords) {
-	    if (medicalRecord.getFirstName() == medicalRecordToUpdate.getFirstName()
-		    && medicalRecord.getLastName() == medicalRecordToUpdate.getLastName()) {
-		// @Todo vérifier l'edit de lists
-		medicalRecord.setBirthDate(medicalRecordToUpdate.getBirthDate());
-		medicalRecord.setMedications(medicalRecordToUpdate.getMedications());
-		medicalRecord.setAllergies(medicalRecordToUpdate.getAllergies());
+	    if (medicalRecord.getFirstName().equals(medicalRecordToUpdate.getFirstName())
+		    && medicalRecord.getLastName().equals(medicalRecordToUpdate.getLastName())) {
+		if (!medicalRecordToUpdate.getBirthDate().equals(null))
+		    medicalRecord.setBirthDate(medicalRecordToUpdate.getBirthDate());
+		if (!medicalRecordToUpdate.getMedications().equals(null))
+		    medicalRecord.setMedications(medicalRecordToUpdate.getMedications());
+		if (!medicalRecordToUpdate.getAllergies().equals(null))
+		    medicalRecord.setAllergies(medicalRecordToUpdate.getAllergies());
 	    }
 	}
     }
