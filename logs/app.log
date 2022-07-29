@@ -1,0 +1,55 @@
+2022-07-29 12:38:13.155 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 16156 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 12:38:13.164 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 12:38:14.013 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-29 12:38:14.036 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-07-29 12:38:14.644 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 12:38:14.660 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 12:38:14.661 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 12:38:14.662 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 12:38:14.799 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 12:38:14.800 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1591 ms
+2022-07-29 12:38:15.046 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110)] - HikariPool-1 - Starting...
+2022-07-29 12:38:15.251 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123)] - HikariPool-1 - Start completed.
+2022-07-29 12:38:15.320 INFO [main] [org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-29 12:38:15.378 INFO [main] [org.hibernate.Version.logVersion(Version.java:44)] - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-29 12:38:15.551 INFO [main] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:56)] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-29 12:38:15.681 INFO [main] [org.hibernate.dialect.Dialect.<init>(Dialect.java:175)] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-29 12:38:15.876 INFO [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-29 12:38:15.885 INFO [main] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 12:38:16.005 WARN [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:219)] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-29 12:38:16.422 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 12:38:16.446 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 12:38:16.473 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 12:38:16.490 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 3.639 seconds (JVM running for 4.394)
+2022-07-29 12:38:19.914 INFO [http-nio-8080-exec-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 12:38:19.914 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 12:38:19.916 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 2 ms
+2022-07-29 12:38:20.036 INFO [http-nio-8080-exec-2] [com.safetynet.alerts.controller.StatusController.listFireStationCoverage(StatusController.java:59)] - GET request to /firestation?statioNumber=4
+2022-07-29 12:38:20.036 ERROR [http-nio-8080-exec-2] [com.safetynet.alerts.controller.StatusController.listFireStationCoverage(StatusController.java:60)] - this is an error
+2022-07-29 13:15:07.012 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 17624 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 13:15:07.023 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 13:15:08.163 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132)] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-29 13:15:08.196 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201)] - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2022-07-29 13:15:08.926 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 13:15:08.950 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:15:08.951 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 13:15:08.952 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 13:15:09.117 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 13:15:09.118 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 2052 ms
+2022-07-29 13:15:09.358 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110)] - HikariPool-1 - Starting...
+2022-07-29 13:15:09.555 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123)] - HikariPool-1 - Start completed.
+2022-07-29 13:15:09.609 INFO [main] [org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-29 13:15:09.663 INFO [main] [org.hibernate.Version.logVersion(Version.java:44)] - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-29 13:15:09.835 INFO [main] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:56)] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-29 13:15:09.970 INFO [main] [org.hibernate.dialect.Dialect.<init>(Dialect.java:175)] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-29 13:15:10.157 INFO [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-29 13:15:10.166 INFO [main] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 13:15:10.293 WARN [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:219)] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-29 13:15:10.708 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 13:15:10.735 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 13:15:10.761 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 13:15:10.774 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 4.104 seconds (JVM running for 4.886)
+2022-07-29 13:15:27.653 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 13:15:27.654 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 13:15:27.656 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 13:15:27.771 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.FireStationController.listPersons(FireStationController.java:31)] - GET request to /firestation

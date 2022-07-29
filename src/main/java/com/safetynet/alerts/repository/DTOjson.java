@@ -3,7 +3,6 @@ package com.safetynet.alerts.repository;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
@@ -63,19 +62,4 @@ public class DTOjson implements IDTOjson {
 	    this.setJsonData(JsonIterator.deserialize(jsonString, JsonData.class));
 	}
     };
-
-    // @Todo Reserialize whole object
-    public void writeJson(Map<String, String> values, String property) {
-	String jsonPath = this.getJsonPath();
-
-	String stringToWrite = String.format("%s: {}", property);
-
-	try (FileWriter fileWriter = new FileWriter(jsonPath)) {
-	    fileWriter.write(stringToWrite);
-	} catch (Exception e) {
-	    e.printStackTrace();
-	}
-
-    }
-
 }

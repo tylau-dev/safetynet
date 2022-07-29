@@ -50,13 +50,12 @@ public class StatusController {
 	CommunityEmailService = communityEmailService;
     }
 
-    // Mettre les Autowired dans constructor
-
     private static final Logger logger = LogManager.getLogger("EndPointController");
 
     @RequestMapping(value = "/firestation", method = RequestMethod.GET, params = { "stationNumber" })
     public FireStationCoverage listFireStationCoverage(@RequestParam(value = "stationNumber") int stationNumber) {
 	logger.info(String.format("GET request to /firestation?statioNumber=%s", stationNumber));
+
 	return FireStationCoverageService.getFireStationCoverage(stationNumber);
     }
 
