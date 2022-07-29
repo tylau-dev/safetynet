@@ -17,18 +17,29 @@ import org.springframework.web.bind.annotation.RestController;
 import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.service.IFireStationService;
 
+/*
+ * Controller for /firestation endpoint
+ */
 @RestController
 public class FireStationController {
     @Autowired
     private IFireStationService FireStationService;
     private static final Logger logger = LogManager.getLogger("FireStationController");
 
+    /*
+     * Endpoint GET /firestation to return list of FireStations
+     */
     @GetMapping("/firestation")
     public List<FireStation> listFireStations() {
 	logger.info("GET request to /firestation");
 	return FireStationService.getFireStations();
     }
 
+    /*
+     * Endpoint POST /firestation to add firestation
+     * 
+     * @param Firestation firestation
+     */
     @PostMapping(value = "/firestation")
     public ResponseEntity<String> addFireStation(@RequestBody FireStation fireStation) {
 	logger.info("POST request to /firestation");
@@ -46,6 +57,11 @@ public class FireStationController {
 	}
     }
 
+    /*
+     * Endpoint PUT /firestation to add firestation
+     * 
+     * @param Firestation firestation
+     */
     @PutMapping(value = "/firestation")
     public ResponseEntity<String> updateFireStation(@RequestBody FireStation fireStation) {
 	logger.info("PUT request to /firestation");
@@ -63,6 +79,11 @@ public class FireStationController {
 	}
     }
 
+    /*
+     * Endpoint Delete /firestation to add firestation
+     * 
+     * @param Firestation firestation
+     */
     @DeleteMapping(value = "/firestation")
     public ResponseEntity<String> removeFireStation(@RequestBody FireStation fireStation) {
 	logger.info("DELETE request to /firestation");

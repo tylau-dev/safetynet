@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.service.IPersonService;
 
+/*
+ * Controller for /person endpoint
+ */
 @RestController
 public class PersonController {
 
@@ -24,19 +27,20 @@ public class PersonController {
     private IPersonService PersonService;
     private static final Logger logger = LogManager.getLogger("PersonController");
 
+    /*
+     * Endpoint GET /person to return list of MedicalRecords
+     */
     @GetMapping("/person")
     public List<Person> listPersons() {
 	logger.info("GET request to /person");
-	List<Person> personList = PersonService.getPersons();
-	logger.info("PersonService.getPerson success");
-	return personList;
+	return PersonService.getPersons();
     }
 
-//    @GetMapping(value = "/person/{firstName}/{lastName}")
-//    public Person filterPerson(@RequestParam String firstName, @RequestParam String lastName) {
-//	return PersonService.getPerson(firstName, lastName);
-//    }
-
+    /*
+     * Endpoint POST /person to add person
+     * 
+     * @param Person person
+     */
     @PostMapping(value = "/person")
     public ResponseEntity<String> addPerson(@RequestBody Person person) {
 	logger.info("POST request to /person");
@@ -53,6 +57,11 @@ public class PersonController {
 	}
     }
 
+    /*
+     * Endpoint PUT /person to edit person
+     * 
+     * @param Person person
+     */
     @PutMapping(value = "/person")
     public ResponseEntity<String> updatePerson(@RequestBody Person person) {
 	logger.info("PUT request to /person");
@@ -69,6 +78,11 @@ public class PersonController {
 	}
     }
 
+    /*
+     * Endpoint DELETE /person to delete person
+     * 
+     * @param Person person
+     */
     @DeleteMapping(value = "/person")
     public ResponseEntity<String> removePerson(@RequestBody Person person) {
 	logger.info("DELETE request to /person");

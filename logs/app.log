@@ -219,3 +219,26 @@
 2022-07-29 14:47:38.216 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.updateFireStation(FireStationController.java:50)] - PUT request to /firestation
 2022-07-29 14:47:38.216 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.FireStationController.updateFireStation(FireStationController.java:56)] - FireStationService.putFireStation success
 2022-07-29 14:47:41.862 INFO [http-nio-8080-exec-7] [com.safetynet.alerts.controller.FireStationController.listFireStations(FireStationController.java:28)] - GET request to /firestation
+2022-07-29 15:07:20.471 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - Starting AlertsApplication using Java 17.0.1 on DESKTOP-1E3B440 with PID 6664 (D:\Openclassroom\P05\alerts\target\classes started by TY Lau in D:\Openclassroom\P05\alerts)
+2022-07-29 15:07:20.482 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:634)] - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 15:07:21.775 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2022-07-29 15:07:21.796 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-29 15:07:21.796 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2022-07-29 15:07:21.797 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-29 15:07:21.893 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2022-07-29 15:07:21.894 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292)] - Root WebApplicationContext: initialization completed in 1362 ms
+2022-07-29 15:07:22.518 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:58)] - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-29 15:07:22.541 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-29 15:07:22.565 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-29 15:07:22.581 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - Started AlertsApplication in 2.456 seconds (JVM running for 3.255)
+2022-07-29 15:07:29.847 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 15:07:29.848 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'dispatcherServlet'
+2022-07-29 15:07:29.849 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1 ms
+2022-07-29 15:07:29.883 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:29)] - GET request to /person
+2022-07-29 15:07:29.884 INFO [http-nio-8080-exec-1] [com.safetynet.alerts.controller.PersonController.listPersons(PersonController.java:31)] - PersonService.getPerson success
+2022-07-29 15:07:37.633 INFO [http-nio-8080-exec-3] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:42)] - POST request to /person
+2022-07-29 15:07:37.634 INFO [http-nio-8080-exec-3] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:48)] - PersonService.postPerson success
+2022-07-29 15:07:42.530 INFO [http-nio-8080-exec-4] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:42)] - POST request to /person
+2022-07-29 15:07:42.531 ERROR [http-nio-8080-exec-4] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:51)] - PersonService.postPerson failed: Missing Values
+2022-07-29 15:07:46.791 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:42)] - POST request to /person
+2022-07-29 15:07:46.792 INFO [http-nio-8080-exec-6] [com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:48)] - PersonService.postPerson success

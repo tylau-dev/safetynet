@@ -17,18 +17,29 @@ import org.springframework.web.bind.annotation.RestController;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.service.IMedicalRecordService;
 
+/*
+ * Controller for /medicalRecord endpoint
+ */
 @RestController
 public class MedicalRecordController {
     @Autowired
     private IMedicalRecordService MedicalRecordService;
     private static final Logger logger = LogManager.getLogger("MedicalRecordController");
 
+    /*
+     * Endpoint GET /medicalRecord to return list of MedicalRecords
+     */
     @GetMapping("/medicalRecord")
     public List<MedicalRecord> listMedicalRecords() {
 	logger.info("GET request to /medicalRecord");
 	return MedicalRecordService.getMedicalRecords();
     }
 
+    /*
+     * Endpoint POST /medicalRecord to add medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @PostMapping(value = "/medicalRecord")
     public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("POST request to /medicalRecord");
@@ -46,6 +57,11 @@ public class MedicalRecordController {
 	}
     }
 
+    /*
+     * Endpoint PUT /medicalRecord to edit medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @PutMapping(value = "/medicalRecord")
     public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("PUT request to /medicalRecord");
@@ -63,6 +79,11 @@ public class MedicalRecordController {
 	}
     }
 
+    /*
+     * Endpoint DELETE /medicalRecord to delete medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @DeleteMapping(value = "/medicalRecord")
     public ResponseEntity<String> removeMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("DELETE request to /firestation");
