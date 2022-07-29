@@ -18,6 +18,7 @@ import com.safetynet.alerts.service.PersonService;
 @WebMvcTest(controllers = PersonController.class)
 public class PersonControllerTest {
     final String contentBody = "{\"firstName\": \"John\", \"lastName\": \"Doe\", \"address\": \"11 Street\", \"city\": \"TestCity\", \"zip\": \"12345\", \"phone\": \"010101\", \"email\": \"john@doe.com\"}";
+    final String contentBodyNull = "{\"lastName\": \"Doe\", \"address\": \"11 Street\", \"city\": \"TestCity\", \"zip\": \"12345\", \"phone\": \"010101\", \"email\": \"john@doe.com\"}";
 
     @Autowired
     private MockMvc mockMvc;
@@ -47,4 +48,23 @@ public class PersonControllerTest {
 	mockMvc.perform(delete("/person").contentType(MediaType.APPLICATION_JSON).content(contentBody))
 		.andExpect(status().isOk());
     }
+
+    @Test
+    public void testPostWrongMedicalRecord() throws Exception {
+	mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(contentBodyNull))
+		.andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void testPutWrongMedicalRecord() throws Exception {
+	mockMvc.perform(put("/person").contentType(MediaType.APPLICATION_JSON).content(contentBodyNull))
+		.andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void testDeleteWrongMedicalRecord() throws Exception {
+	mockMvc.perform(delete("/person").contentType(MediaType.APPLICATION_JSON).content(contentBodyNull))
+		.andExpect(status().isBadRequest());
+    }
+
 }

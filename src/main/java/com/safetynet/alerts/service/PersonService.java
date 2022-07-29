@@ -51,15 +51,15 @@ public class PersonService implements IPersonService {
 	for (Person person : persons) {
 	    if (person.getFirstName().equals(personToUpdate.getFirstName())
 		    && person.getLastName().equals(personToUpdate.getLastName())) {
-		if (!personToUpdate.getAddress().equals(null))
+		if (personToUpdate.getAddress() != null)
 		    person.setAddress(personToUpdate.getAddress());
-		if (!personToUpdate.getCity().equals(null))
+		if (personToUpdate.getCity() != null)
 		    person.setCity(personToUpdate.getCity());
-		if (!personToUpdate.getZip().equals(null))
+		if (personToUpdate.getZip() != null)
 		    person.setZip(personToUpdate.getZip());
-		if (!personToUpdate.getEmail().equals(null))
+		if (personToUpdate.getEmail() != null)
 		    person.setEmail(personToUpdate.getEmail());
-		if (!personToUpdate.getPhone().equals(null))
+		if (personToUpdate.getPhone() != null)
 		    person.setPhone(personToUpdate.getPhone());
 	    }
 	}

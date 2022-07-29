@@ -66,11 +66,6 @@
 		    <version>0.9.19</version>
 		</dependency>		
 		<dependency>
-		      <groupId>org.springframework.boot</groupId>
-		      <artifactId>spring-boot-starter-test</artifactId>
-		      <scope>test</scope>
-		</dependency>
-		<dependency>
 		  <groupId>com.h2database</groupId>
 		  <artifactId>h2</artifactId>
 		  <scope>runtime</scope>
@@ -94,6 +89,7 @@
 			<plugin>
 			  <groupId>org.apache.maven.plugins</groupId>
 			  <artifactId>maven-site-plugin</artifactId>
+			    <version>4.0.0-M3</version>
 			</plugin>
 			<plugin>
 			  <groupId>org.apache.maven.plugins</groupId>
@@ -111,7 +107,7 @@
 			        </execution>
 			        <execution>
 			            <id>report</id>
-			            <phase>prepare-package</phase>
+			            <phase>test</phase>
 			            <goals>
 			                <goal>report</goal>
 			            </goals>
@@ -121,5 +117,15 @@
 
 		</plugins>
 	</build>
+	
+	<reporting>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jxr-plugin</artifactId>
+	            <version>2.3</version>
+	        </plugin>
+	    </plugins>
+	</reporting>
 
 </project>

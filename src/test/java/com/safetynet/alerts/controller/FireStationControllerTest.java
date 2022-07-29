@@ -18,6 +18,7 @@ import com.safetynet.alerts.service.FireStationService;
 @WebMvcTest(controllers = FireStationController.class)
 public class FireStationControllerTest {
     final String contentBodyFireStation = "{\"address\": \"12 Street\", \"station\": \"2\"}";
+    final String contentBodyFireStationNull = "{\"station\": \"2\"}";
 
     @Autowired
     private MockMvc mockMvc;
@@ -46,6 +47,26 @@ public class FireStationControllerTest {
     public void testDeleteFireStation() throws Exception {
 	mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStation))
 		.andExpect(status().isOk());
+    }
+
+    @Test
+    public void testPostWrongFireStation() throws Exception {
+	mockMvc.perform(
+		post("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStationNull))
+		.andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void testPutWrongFireStation() throws Exception {
+	mockMvc.perform(put("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStationNull))
+		.andExpect(status().isBadRequest());
+    }
+
+    @Test
+    public void testDeleteWrongFireStation() throws Exception {
+	mockMvc.perform(
+		delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(contentBodyFireStationNull))
+		.andExpect(status().isBadRequest());
     }
 
 }

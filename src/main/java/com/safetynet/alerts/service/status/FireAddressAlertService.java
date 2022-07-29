@@ -26,6 +26,9 @@ public class FireAddressAlertService implements IFireAddressAlertService {
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("FireAddressAlertService");
 
+    /*
+     * @Param String address
+     */
     @Override
     public FireAddressAlert getFireAddressAlert(String address) {
 	FireAddressAlert resultFireAddressAlert = new FireAddressAlert();
