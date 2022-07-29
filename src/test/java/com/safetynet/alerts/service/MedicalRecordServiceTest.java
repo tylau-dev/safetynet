@@ -19,7 +19,7 @@ import com.safetynet.alerts.model.MedicalRecord;
 public class MedicalRecordServiceTest {
 
     @Autowired
-    private MedicalRecordService medicalRecordService;
+    private IMedicalRecordService medicalRecordService;
     private static MedicalRecord medicalRecordToAdd = new MedicalRecord();;
 
     @BeforeAll

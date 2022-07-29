@@ -10,19 +10,28 @@ import org.springframework.stereotype.Service;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.IDTOjson;
 
+/*
+ * Service for CRUD operations on Persons
+ */
 @Service
 public class PersonService implements IPersonService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PersonService");
 
-    // @todos trycatch
-
+    /*
+     * Retrieve Persons from DTO
+     */
     @Override
     public List<Person> getPersons() {
 	return DTOjson.getJsonData().getPersons();
     }
 
+    /*
+     * Add Person from JSON data
+     * 
+     * @Param Person personToAdd
+     */
     @Override
     public void postPerson(Person personToAdd) {
 	List<Person> persons = getPersons();
@@ -30,13 +39,18 @@ public class PersonService implements IPersonService {
 	DTOjson.getJsonData().setPersons(persons);
     }
 
+    /*
+     * Edit Person from JSON data
+     * 
+     * @Param Person personToUpdate
+     */
     @Override
     public void putPerson(Person personToUpdate) {
 	List<Person> persons = getPersons();
 
 	for (Person person : persons) {
-	    if (person.getFirstName() == personToUpdate.getFirstName()
-		    && person.getLastName() == personToUpdate.getLastName()) {
+	    if (person.getFirstName().equals(personToUpdate.getFirstName())
+		    && person.getLastName().equals(personToUpdate.getLastName())) {
 		if (personToUpdate.getAddress() != null)
 		    person.setAddress(personToUpdate.getAddress());
 		if (personToUpdate.getCity() != null)
@@ -51,14 +65,20 @@ public class PersonService implements IPersonService {
 	}
     }
 
+    /*
+     * Delete Person from JSON data
+     * 
+     * @Param Person personToDelete
+     */
     @Override
     public void deletePerson(Person personToDelete) {
 	List<Person> persons = getPersons();
-	// @todos try catch for the case where the user is not found
+	Boolean personExist = false;
 	for (int i = 0; i < persons.size(); i++) {
 	    if (persons.get(i).getFirstName().equals(personToDelete.getFirstName())
 		    && persons.get(i).getLastName().equals(personToDelete.getLastName())) {
 		persons.remove(i);
+		personExist = true;
 	    }
 	}
     }

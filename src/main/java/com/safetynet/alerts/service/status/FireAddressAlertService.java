@@ -9,20 +9,26 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.safety.alerts.utils.AgeHandler;
 import com.safetynet.alerts.model.FireStation;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.status.FireAddressAlert;
 import com.safetynet.alerts.model.status.Resident;
 import com.safetynet.alerts.repository.IDTOjson;
+import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into FireAddressAlert
+ */
 @Service
 public class FireAddressAlertService implements IFireAddressAlertService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("FireAddressAlertService");
 
+    /*
+     * @Param String address
+     */
     @Override
     public FireAddressAlert getFireAddressAlert(String address) {
 	FireAddressAlert resultFireAddressAlert = new FireAddressAlert();

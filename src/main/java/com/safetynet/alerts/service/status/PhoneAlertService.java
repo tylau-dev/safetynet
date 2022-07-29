@@ -13,12 +13,18 @@ import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.status.PhoneAlert;
 import com.safetynet.alerts.repository.IDTOjson;
 
+/*
+ * Format data from DTO into PhoneAlertService
+ */
 @Service
 public class PhoneAlertService implements IPhoneAlertService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PhoneAlertService");
 
+    /*
+     * @Param int stationNumber
+     */
     @Override
     public List<PhoneAlert> getPhoneAlert(int stationNumber) {
 	List<PhoneAlert> resultPhoneAlert = new ArrayList<PhoneAlert>();

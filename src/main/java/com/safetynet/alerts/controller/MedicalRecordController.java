@@ -17,37 +17,88 @@ import org.springframework.web.bind.annotation.RestController;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.service.IMedicalRecordService;
 
+/*
+ * Controller for /medicalRecord endpoint
+ */
 @RestController
 public class MedicalRecordController {
     @Autowired
     private IMedicalRecordService MedicalRecordService;
     private static final Logger logger = LogManager.getLogger("MedicalRecordController");
 
+    /*
+     * Endpoint GET /medicalRecord to return list of MedicalRecords
+     */
     @GetMapping("/medicalRecord")
     public List<MedicalRecord> listMedicalRecords() {
 	logger.info("GET request to /medicalRecord");
 	return MedicalRecordService.getMedicalRecords();
     }
 
+    /*
+     * Endpoint POST /medicalRecord to add medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @PostMapping(value = "/medicalRecord")
     public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("POST request to /medicalRecord");
-	MedicalRecordService.postMedicalRecord(medicalRecord);
-	return new ResponseEntity<String>("POST request to /medicalRecord successful", HttpStatus.CREATED);
+	try {
+	    if (medicalRecord.getFirstName().equals(null) || medicalRecord.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    MedicalRecordService.postMedicalRecord(medicalRecord);
+	    logger.info("MedicalRecordService.postMedicalRecord success");
+	    return new ResponseEntity<String>("POST request to /medicalRecord successful", HttpStatus.CREATED);
+	} catch (Exception e) {
+	    logger.error("MedicalRecordService.postMedicalRecord failed: Missing Values");
+	    return new ResponseEntity<String>("POST request to /medicalRecord failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
+    /*
+     * Endpoint PUT /medicalRecord to edit medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @PutMapping(value = "/medicalRecord")
     public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("PUT request to /medicalRecord");
-	MedicalRecordService.putMedicalRecord(medicalRecord);
-	return new ResponseEntity<String>("PUT request to /medicalRecord successful", HttpStatus.OK);
+	try {
+	    if (medicalRecord.getFirstName().equals(null) || medicalRecord.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    MedicalRecordService.putMedicalRecord(medicalRecord);
+	    logger.info("MedicalRecordService.putMedicalRecord success");
+	    return new ResponseEntity<String>("PUT request to /medicalRecord successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("MedicalRecordService.putMedicalRecord failed: Missing Values");
+	    return new ResponseEntity<String>("PUT request to /medicalRecord failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
+    /*
+     * Endpoint DELETE /medicalRecord to delete medicalRecord
+     * 
+     * @param MedicalRecord medicalRecord
+     */
     @DeleteMapping(value = "/medicalRecord")
     public ResponseEntity<String> removeMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 	logger.info("DELETE request to /firestation");
-	MedicalRecordService.deleteMedicalRecord(medicalRecord);
-	return new ResponseEntity<String>("DELETE request to /medicalRecord successful", HttpStatus.OK);
+	try {
+	    if (medicalRecord.getFirstName().equals(null) || medicalRecord.getLastName().equals(null)) {
+		throw new Exception();
+	    }
+	    MedicalRecordService.deleteMedicalRecord(medicalRecord);
+	    logger.info("MedicalRecordService.deleteMedicalRecord success");
+	    return new ResponseEntity<String>("DELETE request to /medicalRecord successful", HttpStatus.OK);
+	} catch (Exception e) {
+	    logger.error("MedicalRecordService.deleteMedicalRecord failed: Missing Values");
+	    return new ResponseEntity<String>("DELETE request to /medicalRecord failed: Missing Values",
+		    HttpStatus.BAD_REQUEST);
+	}
     }
 
 }

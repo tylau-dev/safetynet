@@ -9,18 +9,24 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.safety.alerts.utils.AgeHandler;
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.status.PersonInfo;
 import com.safetynet.alerts.repository.IDTOjson;
+import com.safetynet.alerts.utils.AgeHandler;
 
+/*
+ * Format data from DTO into PersonInfo
+ */
 @Service
 public class PersonInfoService implements IPersonInfoService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("PersonInfoService");
 
+    /*
+     * @Param String firstName, String lastName
+     */
     @Override
     public List<PersonInfo> getPersonInfo(String firstName, String lastName) {
 	List<PersonInfo> resultPersonInfo = new ArrayList<PersonInfo>();

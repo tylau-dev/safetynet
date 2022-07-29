@@ -12,12 +12,18 @@ import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.model.status.CommunityEmail;
 import com.safetynet.alerts.repository.IDTOjson;
 
+/*
+ * Format data from DTO into CommunityEmail
+ */
 @Service
 public class CommunityEmailService implements ICommunityEmailService {
     @Autowired
     private IDTOjson DTOjson;
     private static final Logger logger = LogManager.getLogger("CommunityEmailService");
 
+    /*
+     * @Param String city
+     */
     @Override
     public List<CommunityEmail> getCommunityEmail(String city) {
 	List<CommunityEmail> resultCommunityEmail = new ArrayList<CommunityEmail>();
