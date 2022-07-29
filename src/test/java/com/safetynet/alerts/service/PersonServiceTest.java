@@ -18,7 +18,7 @@ import com.safetynet.alerts.model.Person;
 public class PersonServiceTest {
 
     @Autowired
-    private PersonService personService;
+    private IPersonService personService;
     private static Person personToAdd = new Person();;
 
     @BeforeAll

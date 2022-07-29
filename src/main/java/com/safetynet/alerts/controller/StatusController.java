@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,26 +27,30 @@ import com.safetynet.alerts.service.status.IPhoneAlertService;
 @RestController
 
 public class StatusController {
-    @Autowired
+
     private IFireStationCoverageService FireStationCoverageService;
-
-    @Autowired
     private IChildAlertService ChildAlertService;
-
-    @Autowired
     private IPhoneAlertService PhoneAlertService;
-
-    @Autowired
     private IFireAddressAlertService FireAddressAlertService;
-
-    @Autowired
     private IFloodStationsService FloodStationsService;
-
-    @Autowired
     private IPersonInfoService PersonInfoService;
-
-    @Autowired
     private ICommunityEmailService CommunityEmailService;
+
+    public StatusController(IFireStationCoverageService fireStationCoverageService,
+	    IChildAlertService childAlertService, IPhoneAlertService phoneAlertService,
+	    IFireAddressAlertService fireAddressAlertService, IFloodStationsService floodStationsService,
+	    IPersonInfoService personInfoService, ICommunityEmailService communityEmailService) {
+	super();
+	FireStationCoverageService = fireStationCoverageService;
+	ChildAlertService = childAlertService;
+	PhoneAlertService = phoneAlertService;
+	FireAddressAlertService = fireAddressAlertService;
+	FloodStationsService = floodStationsService;
+	PersonInfoService = personInfoService;
+	CommunityEmailService = communityEmailService;
+    }
+
+    // Mettre les Autowired dans constructor
 
     private static final Logger logger = LogManager.getLogger("EndPointController");
 
