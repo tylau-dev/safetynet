@@ -2,7 +2,7 @@
 Safetynet is a project that loads data from a JSON file in-memory and enables Endpoints for retrieving and editing data.
 
 # Requirements
-- JDK 1.7
+- JDK 17.0.1
 - Apache Maven 3.8.6
 
 # Installation
