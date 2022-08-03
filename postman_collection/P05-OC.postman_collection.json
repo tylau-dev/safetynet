@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "829dd686-33b0-4f2e-8c3b-a32ff1134058",
+		"name": "P05-OC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test2\",\r\n    \"address\": \"azeazeaz\",\r\n    \"city\": \"azeazeza\",\r\n    \"zip\": \"11110\",\r\n    \"phone\": \"010102\",\r\n    \"email\": \"azeaze@zezae.co\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/firestation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"address\": \"15 Test Street\",\r\n        \"station\": \"98\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/firestation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"firestation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/medicalRecord",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \"Test1\",\r\n        \"lastName\": \"Test2\",\r\n        \"birthDate\": \"30/07/1222\",\r\n        \"medications\": [\r\n            \"aznol:350mg\",\r\n            \"hydrapermazol:100mg\"\r\n        ],\r\n        \"allergies\": [\r\n            \"nillacilan\"\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicalRecord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicalRecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/firestation?stationNumber=4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/firestation?stationNumber=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"firestation"
+					],
+					"query": [
+						{
+							"key": "stationNumber",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/childAlert?address=1509 Culver St",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/childAlert?address=1509 Culver St",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"childAlert"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "1509 Culver St"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/phoneAlert?firestation=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/phoneAlert?firestation=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phoneAlert"
+					],
+					"query": [
+						{
+							"key": "firestation",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/fire?address=1509 Culver St",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fire?address=1509 Culver St",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fire"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "1509 Culver St"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/flood/stations?stations=1,2,3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/flood/stations?stations=1,2,3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flood",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "stations",
+							"value": "1,2,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/personInfo?firstName=John&lastName=Boyd",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/personInfo?firstName=John&lastName=Boyd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personInfo"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "John"
+						},
+						{
+							"key": "lastName",
+							"value": "Boyd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/communityEmail?city=Culver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/communityEmail?city=Culver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"communityEmail"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Culver"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/actuator/info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
