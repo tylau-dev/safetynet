@@ -22,5 +22,6 @@ cd "CODE_DIRECTORY"
 mvn spring-boot:run
 ```
 
-3) The Endpoints are ready to use on the port 8080. In API Platform (i.e. Postman), import the Request Collection in the file P05-OC.postman_collection in the psotman_collection directory.
-This collection contains samples for accessing all the existing requests of the Application.
+3) The Endpoints are ready to use on the port 8080. 
+In an API Platform (i.e. Postman), import the Request Collection in the file P05-OC.postman_collection in the directory postman_collection.
+The collection contains samples for accessing all the existing requests of the Application.
